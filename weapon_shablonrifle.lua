@@ -249,8 +249,8 @@ end
 -- -- self.Primary.Spread = 0.011																	-- Изменяет параметр разброса. Поддерживается только Простой Разброс.
 -- self.Weapon:SetNWInt( "MouseSensitivity", 0.67 )								-- Должна изменять чувствительность мыши. Почему должна? Потому что она почему-то не работает.
 -- self.Owner:SetFOV( self.Owner:GetFOV() / 1.4, 0.22 )							-- Изменяет угол обзора(первая цифра), и скорость перехода в этот угол обзора(вторая цифра, в секундах)
--- self.Owner:SetWalkSpeed( self.Owner:GetWalkSpeed * 0.5 )				-- Изменяет скорость передвижения
--- self.Owner:SetRunSpeed( self.Owner:GetRunSpeed * 0.5 )					-- Настолько непохожая на верхнюю строчку кода строчка кода, что бог делал ее седьмой день.
+-- self.Owner:SetWalkSpeed( self.Owner:GetWalkSpeed() * 0.5 )				-- Изменяет скорость передвижения
+-- self.Owner:SetRunSpeed( self.Owner:GetRunSpeed() * 0.5 )					-- Настолько непохожая на верхнюю строчку кода строчка кода, что бог делал ее седьмой день.
 -- -- self:EmitSound("weapons_scope/rifle/zoom_in_rifl"..(math.random (1,6))..".wav", 40, 100, 1, 3)			-- Звук.
 -- else -- Если мы уже находились в прицеливании, то функция ниже вернет оружие в положение "От бедра".
 -- if self.Scope == 1 then
@@ -259,15 +259,15 @@ end
 -- -- self.Primary.Spread = 0.04																	-- Изменяет параметр разброса. Поддерживается только Простой Разброс.
 -- self.Weapon:SetNWInt( "MouseSensitivity", 1 )
 -- self.Owner:SetFOV( 0, 0.2 )
--- self.Owner:SetWalkSpeed( self.Owner:GetWalkSpeed * 2 )
--- self.Owner:SetRunSpeed( self.Owner:GetRunSpeed * 2 )
+-- self.Owner:SetWalkSpeed( self.Owner:GetWalkSpeed() * 2 )
+-- self.Owner:SetRunSpeed( self.Owner:GetRunSpeed() * 2 )
 -- -- self:EmitSound("weapons_scope/rifle/zoom_out_rifl"..(math.random (1,6))..".wav", 40, 100, 1, 136)
 -- end
 -- end
 -- if self.Scope >= 2 then -- Это на всякий случай, если по каким-то причинам переменная ушла сильно далеко.
 -- self.Scope = 1
 -- end
--- if self.Scope =< -1 then -- Опять же, на всякий случай.
+-- if self.Scope <= -1 then -- Опять же, на всякий случай.
 -- self.Scope = 0
 -- end
 -- end
